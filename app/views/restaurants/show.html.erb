@@ -8,12 +8,14 @@
   <%#= link_to "New Review", new_restaurant_review_path(@restaurant) %>
   <h2>Reviews</h2>
   <ul>
+  <% if !@reviews.nil? %>
     <% @reviews.each do |review| %>
       <li>
         <p class="rating"><%= "⭐" * review.rating %></p>
         <p class="content"><%= review.content %></p>
       </li>
     <% end %>
+  <% end %>
   </ul>
 
   <h4>New Review</h4>
