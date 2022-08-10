@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Yulp", restaurants_path %>
+      <%= link_to "All restaurants", restaurants_path %>
+      <%= link_to "New restaurant", new_restaurant_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
