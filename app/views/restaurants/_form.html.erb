@@ -3,7 +3,6 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number, placeholder: "1234567890" %>
-  <%#= f.association :category %>
   <%= f.input :category, collection: %w[Chinese Italian Japanese French Belgian] %>
   <%= f.submit "Submit New Restaurant", class: "btn btn-primary"%>
 <% end %>

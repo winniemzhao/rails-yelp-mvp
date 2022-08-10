@@ -14,7 +14,7 @@ Restaurant.destroy_all
 puts "Seeding restaurants..."
 
 5.times do
-  restaurant = Restaurant.create!(name: Faker::Food.spice, address: Faker::Address.street_address, phone_number: Faker::PhoneNumber.cell_phone, category: %w[chinese italian japanese french belgian].sample)
+  restaurant = Restaurant.create!(name: Faker::Food.spice, address: Faker::Address.street_address, phone_number: Faker::PhoneNumber.cell_phone, category: %w[Chinese Italian Japanese French Belgian].sample)
   puts "Restaurant with id #{restaurant.id}"
 end
 
