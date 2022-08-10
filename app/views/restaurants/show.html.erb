@@ -5,7 +5,8 @@
 <p>Phone Number: <%= @restaurant.phone_number %></p>
 
 <div class="reviews">
-  <%= link_to "New Review", new_restaurant_review_path(@restaurant) %>
+  <%#= link_to "New Review", new_restaurant_review_path(@restaurant) %>
+  <h2>Reviews</h2>
   <ul>
     <% @reviews.each do |review| %>
       <li>
@@ -14,6 +15,13 @@
       </li>
     <% end %>
   </ul>
+
+  <h4>New Review</h4>
+  <%= simple_form_for([@restaurant, @review]) do |f| %>
+    <%= f.input :rating, collection: 0..5 %>
+    <%= f.input :content %>
+    <%= f.submit "Create New Review", class: "btn btn-primary"%>
+  <% end %>
 
 </div>
 
